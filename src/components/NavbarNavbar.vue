@@ -1,6 +1,6 @@
 <template>
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="navbar">
-        <a class="navbar-brand m-2" href="/" style="color: white">
+    <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
+        <a class="navbar-brand" href="/" style="color: white; margin-left: 40px">
             <img src="@/assets/icon.jpg" width="60" height="60" alt="Logo">PLC图床
         </a>
 
@@ -22,15 +22,20 @@
                 </li>
             </ul>
         </div>
-        <div v-if="isLoggedIn" class="dropdown ms-auto m-2">
+        <div v-if="isLoggedIn" class="dropdown ms-auto" style="margin-right: 40px">
             <img :src="image_url" alt="Avatar" class="avatar img-thumbnail rounded-circle dropdown-toggle ms-auto"
                  id="avatarDropdown" data-bs-toggle="dropdown" width="60" height="60" aria-expanded="false"/>
             <ul class="dropdown-menu ms-auto avatar dropdown-menu-end" aria-labelledby="avatarDropdown">
+                <li>
+                    <router-link class="dropdown-item" to="/profile">个人中心</router-link>
+                </li>
                 <li><a class="dropdown-item" @click="logout">退出登录</a></li>
             </ul>
         </div>
         <div v-if="adminLoggedIn" class="dropdown ms-auto m-2">
-            <p id="usernameDropdown" class="dropdown-toggle ms-auto" data-bs-toggle="dropdown" aria-expanded="false">管理员<em>{{ adminUsername }}</em>已登录</p>
+            <p id="usernameDropdown" class="dropdown-toggle ms-auto" data-bs-toggle="dropdown" aria-expanded="false">
+                管理员<em>{{ adminUsername }}</em>已登录
+            </p>
             <ul class="dropdown-menu ms-auto avatar dropdown-menu-end" aria-labelledby="usernameDropdown">
                 <li><a class="dropdown-item" @click="adminLogout">退出登录</a></li>
             </ul>
@@ -103,7 +108,7 @@ export default {
         this.fetchAvatar();
         this.fetchAdminUsername();
     },
-}
+};
 </script>
 
 <style scoped>
