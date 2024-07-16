@@ -47,7 +47,7 @@ export default {
                 this.$emit('close');
                 window.location.reload();
             } catch (error) {
-                alert(error);
+                alert(error.response.data.error);
             }
         }
     }

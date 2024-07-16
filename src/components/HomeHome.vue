@@ -4,6 +4,7 @@
         <LoginLogin v-if="showLoginModal" @close="showLoginModal = false"></LoginLogin>
         <RegisterRegister v-if="showRegisterModal" @close="showRegisterModal = false"></RegisterRegister>
         <AdminLogin v-if="showAdminLoginModal" @close="showAdminLoginModal = false"></AdminLogin>
+        <FooterFooter class="fixed-bottom"></FooterFooter>
     </div>
 </template>
 <script>
@@ -11,9 +12,11 @@ import NavbarNavbar from "@/components/NavbarNavbar.vue";
 import LoginLogin from "@/components/LoginLogin.vue";
 import RegisterRegister from "@/components/RegisterRegister.vue";
 import AdminLogin from "@/components/AdminLogin.vue";
+import FooterFooter from "@/components/FooterFooter.vue";
 
 export default {
     components: {
+        FooterFooter,
         NavbarNavbar,
         LoginLogin,
         RegisterRegister,
