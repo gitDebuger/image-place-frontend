@@ -3,7 +3,6 @@
         <a class="navbar-brand" href="/" style="color: white; margin-left: 40px">
             <img src="@/assets/icon.jpg" width="60" height="60" alt="Logo">PLC图床
         </a>
-
         <button v-if="!isLoggedIn && !adminLoggedIn" class="navbar-toggler m-3" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                 aria-label="Toggle navigation">

@@ -13,6 +13,10 @@
                             <a class="nav-link" :class="{ active: selectedTab === 'changePassword' }"
                                @click="selectedTab = 'changePassword'">修改密码</a>
                         </li>
+                        <li class="nav-item m-2">
+                            <a class="nav-link" :class="{ active: selectedTab === 'changeAvatar' }"
+                               @click="selectedTab = 'changeAvatar'">修改头像</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="col-md-9">
@@ -21,6 +25,9 @@
                     </div>
                     <div v-if="selectedTab === 'changePassword'">
                         <ChangePassword class="mt-2 text-center" style="max-width: 400px; margin-left: 200px"></ChangePassword>
+                    </div>
+                    <div v-if="selectedTab === 'changeAvatar'">
+                        <ImageUpload style="margin-left: 300px"></ImageUpload>
                     </div>
                 </div>
             </div>
@@ -34,10 +41,12 @@ import NavbarNavbar from "@/components/NavbarNavbar.vue";
 import FooterFooter from "@/components/FooterFooter.vue";
 import PersonalInfo from "@/components/PersonalInfo.vue";
 import ChangePassword from "@/components/ChangePassword.vue";
+import ImageUpload from "@/components/ImageUpload.vue";
 
 export default {
     name: "PersonalProfile",
     components: {
+        ImageUpload,
         ChangePassword,
         PersonalInfo,
         NavbarNavbar,

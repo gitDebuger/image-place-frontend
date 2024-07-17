@@ -48,9 +48,20 @@ export default {
         };
     },
     methods: {
-        saveChanges() {
-            // TODO: send personal information to the backend to save it
+        async saveChanges() {
+            try {
+                const response = await axios.post('/api/update-personal-info', {
+                    token: localStorage.getItem('token'),
+                    nickname: this.user.nickname,
+                    email: this.user.email,
+                    resume: this.user.resume,
+                });
+                alert(response.data.message);
+            } catch (error) {
+                alert(error);
+            }
             this.isEditing = false;
+            window.location.reload();
         },
         editProfile() {
             this.isEditing = true;
@@ -68,7 +79,17 @@ export default {
             }
         },
         async fetchPersonalInfo() {
-            // TODO: if there is a user has logged in, get the user's personal information from the backend
+            try {
+                const response = await axios.post('/api/get-personal-info', {
+                    token: localStorage.getItem('token'),
+                });
+                this.user.username = response.data.username;
+                this.user.nickname = response.data.nickname;
+                this.user.email = response.data.email;
+                this.user.resume = response.data.resume;
+            } catch (error) {
+                alert(error);
+            }
         },
     },
     created() {

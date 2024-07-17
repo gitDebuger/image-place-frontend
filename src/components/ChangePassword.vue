@@ -19,6 +19,8 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
     name: 'ChangePassword',
     data() {
@@ -29,9 +31,25 @@ export default {
         };
     },
     methods: {
-        changePassword() {
-            /* TODO: check whether the new password is the same as the confirm password
-                and send the data to the backend to save it */
+        async changePassword() {
+            if (this.current_password === this.new_password) {
+                alert('新密码不能和原密码相同');
+            } else if (this.new_password !== this.confirm_password) {
+                alert('两次输入的密码不同');
+            } else {
+                try {
+                    const response = await axios.post('/api/update-password', {
+                        token: localStorage.getItem('token'),
+                        current_password: this.current_password,
+                        new_password: this.new_password,
+                    });
+                    alert(response.data.message);
+                    localStorage.removeItem('token');
+                    window.location.reload();
+                } catch (error) {
+                    alert(error);
+                }
+            }
         }
     }
 }
