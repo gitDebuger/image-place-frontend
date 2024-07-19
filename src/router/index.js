@@ -4,6 +4,7 @@ import PersonalProfile from "@/views/PersonalProfile.vue";
 import MyPictures from "@/views/MyPictures.vue";
 import UploadPictures from "@/views/UploadPictures.vue";
 import HelpDocument from "@/views/HelpDocument.vue";
+import ImageDetail from "@/views/ImageDetail.vue";
 
 const routes = [
     {path: '/', component: HomeHome},
@@ -11,6 +12,11 @@ const routes = [
     {path: '/pictures', component: MyPictures, meta: {requiresAuth: true}},
     {path: '/upload', component: UploadPictures, meta: {requiresAuth: true}},
     {path: '/help', component: HelpDocument, meta: {requiresAuth: true}},
+    {
+        path: '/image/:uuid',
+        component: ImageDetail,
+        props: true,
+    }
 ];
 
 const router = createRouter({

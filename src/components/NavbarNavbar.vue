@@ -41,6 +41,12 @@
                 <li class="nav-item m-2 text-white">
                     <router-link :to="helpDocumentUrl" class="text-white" style="text-decoration: none">帮助文档</router-link>
                 </li>
+                <li class="nav-item m-2 text-white">
+                    <a href="https://ys.mihoyo.com/cloud/" class="text-white" style="text-decoration: none" target="_blank">云原神网页版</a>
+                </li>
+                <li class="nav-item m-2 text-white">
+                    <a href="https://sr.mihoyo.com/cloud/" class="text-white" style="text-decoration: none" target="_blank">云星穹铁道网页版</a>
+                </li>
             </ul>
         </div>
         <div v-if="isLoggedIn" class="dropdown ms-auto" style="margin-right: 40px">
