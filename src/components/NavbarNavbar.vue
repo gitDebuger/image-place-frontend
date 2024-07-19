@@ -21,14 +21,47 @@
                 </li>
             </ul>
         </div>
+        <button v-if="isLoggedIn" class="navbar-toggler m-3 ms-auto" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navItems" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation"
+        style="background-color: white">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div v-if="isLoggedIn" id="navItems" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item m-2 text-white">
+                    <router-link :to="uploadImageUrl" class="text-white" style="text-decoration: none">上传图片</router-link>
+                </li>
+                <li class="nav-item m-2">
+                    <router-link :to="personProfileUrl" class="text-white" style="text-decoration: none">个人中心</router-link>
+                </li>
+                <li class="nav-item m-2 text-white">
+                    <router-link :to="myPicturesUrl" class="text-white" style="text-decoration: none">我的图片</router-link>
+                </li>
+                <li class="nav-item m-2 text-white">
+                    <router-link :to="helpDocumentUrl" class="text-white" style="text-decoration: none">帮助文档</router-link>
+                </li>
+            </ul>
+        </div>
         <div v-if="isLoggedIn" class="dropdown ms-auto" style="margin-right: 40px">
             <img :src="image_url" alt="Avatar" class="avatar img-thumbnail rounded-circle dropdown-toggle ms-auto"
                  id="avatarDropdown" data-bs-toggle="dropdown" width="60" height="60" aria-expanded="false"/>
             <ul class="dropdown-menu ms-auto avatar dropdown-menu-end" aria-labelledby="avatarDropdown">
                 <li>
-                    <router-link class="dropdown-item" to="/profile">个人中心</router-link>
+                    <router-link class="dropdown-item" :to="uploadImageUrl">上传图片</router-link>
                 </li>
-                <li><a class="dropdown-item" @click="logout">退出登录</a></li>
+                <li>
+                    <router-link class="dropdown-item" :to="personProfileUrl">个人中心</router-link>
+                </li>
+                <li>
+                    <router-link class="dropdown-item" :to="myPicturesUrl">我的图片</router-link>
+                </li>
+                <li>
+                    <router-link class="dropdown-item" :to="helpDocumentUrl">帮助文档</router-link>
+                </li>
+                <li>
+                    <a class="dropdown-item" @click="logout">退出登录</a>
+                </li>
             </ul>
         </div>
         <div v-if="adminLoggedIn" class="dropdown ms-auto m-2">
@@ -101,6 +134,10 @@ export default {
         return {
             image_url: '',
             adminUsername: '',
+            uploadImageUrl: '/upload',
+            personProfileUrl: '/profile',
+            myPicturesUrl: '/pictures',
+            helpDocumentUrl: '/help',
         };
     },
     created() {

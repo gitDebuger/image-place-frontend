@@ -51,7 +51,6 @@ export default {
         PersonalInfo,
         NavbarNavbar,
         FooterFooter,
-
     },
     data() {
         return {
