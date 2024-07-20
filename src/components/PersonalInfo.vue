@@ -60,8 +60,8 @@ export default {
             } catch (error) {
                 alert(error);
             }
+            await this.fetchPersonalInfo();
             this.isEditing = false;
-            window.location.reload();
         },
         editProfile() {
             this.isEditing = true;
