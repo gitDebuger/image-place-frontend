@@ -7,16 +7,43 @@ import HelpDocument from "@/views/HelpDocument.vue";
 import ImageDetail from "@/views/ImageDetail.vue";
 
 const routes = [
-    {path: '/', component: HomeHome},
-    {path: '/profile', component: PersonalProfile, meta: {requiresAuth: true}},
-    {path: '/pictures', component: MyPictures, meta: {requiresAuth: true}},
-    {path: '/upload', component: UploadPictures, meta: {requiresAuth: true}},
-    {path: '/help', component: HelpDocument, meta: {requiresAuth: true}},
+    {
+        path: '/',
+        component: HomeHome
+    },
+    {
+        path: '/profile',
+        component: PersonalProfile,
+        meta: {
+            requiresAuth: true
+        }
+    },
+    {
+        path: '/pictures',
+        component: MyPictures,
+        meta: {
+            requiresAuth: true
+        }
+    },
+    {
+        path: '/upload',
+        component: UploadPictures,
+        meta: {
+            requiresAuth: true
+        }
+    },
+    {
+        path: '/help',
+        component: HelpDocument,
+        meta: {
+            requiresAuth: true
+        }
+    },
     {
         path: '/image/:uuid',
         component: ImageDetail,
         props: true,
-    }
+    },
 ];
 
 const router = createRouter({

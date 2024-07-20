@@ -13,10 +13,12 @@
                             <a class="nav-link" :class="{ active: selectedTab === album.id }"
                                @click="fetchPictures(album.id, album.name)">
                                 {{ album.name }}
-                                <button class="btn btn-sm btn-success rounded-circle m-1" :disabled="selectedTab !== album.id" @click.stop="showRenameAlbum">
+                                <button class="btn btn-sm btn-success rounded-circle m-1"
+                                        :disabled="selectedTab !== album.id" @click.stop="showRenameAlbum">
                                     <i class="bi bi-pencil"></i>
                                 </button>
-                                <button class="btn btn-sm btn-danger rounded-circle m-1" :disabled="selectedTab !== album.id" @click.stop="showDeleteAlbum">
+                                <button class="btn btn-sm btn-danger rounded-circle m-1"
+                                        :disabled="selectedTab !== album.id" @click.stop="showDeleteAlbum">
                                     <i class="bi bi-trash"></i>
                                 </button>
                             </a>
@@ -30,8 +32,10 @@
                     </div>
                     <div v-if="selectedTab !== 'allPictures'" class="row">
                         <div class="ms-auto" v-if="selectedTab !== 'allPictures'">
-                            <button class="btn btn-outline-secondary m-2" @click="showAddPictures">添加图片到相册</button>
-                            <button class="btn btn-outline-danger m-2" @click="showRemovePictures">从相册中移除图片</button>
+                            <button class="btn btn-outline-secondary m-2" @click="showAddPictures">添加图片到相册
+                            </button>
+                            <button class="btn btn-outline-danger m-2" @click="showRemovePictures">从相册中移除图片
+                            </button>
                         </div>
                         <image-card v-for="image in albumImages" :key="image.uuid" :image="image"></image-card>
                     </div>
@@ -73,7 +77,8 @@
                         <h6>确定要删除吗？</h6>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" @click="showDeleteAlbumModal = false">取消</button>
+                        <button type="button" class="btn btn-secondary" @click="showDeleteAlbumModal = false">取消
+                        </button>
                         <button type="button" class="btn btn-danger" @click="deleteAlbum">确定</button>
                     </div>
                 </div>
@@ -90,7 +95,8 @@
                         <form>
                             <div class="form-group m-2">
                                 <label for="oldAlbumName">旧的相册名称</label>
-                                <input type="text" class="form-control" id="oldAlbumName" v-model="oldAlbumName" readonly/>
+                                <input type="text" class="form-control" id="oldAlbumName" v-model="oldAlbumName"
+                                       readonly/>
                             </div>
                             <div class="form-group m-2">
                                 <label for="newAlbumName">新的相册名称</label>
@@ -117,7 +123,8 @@
                         <form>
                             <div class="form-group m-2">
                                 <label for="albumName">相册名称</label>
-                                <input type="text" class="form-control" id="albumName" v-model="selectedAlbum" readonly/>
+                                <input type="text" class="form-control" id="albumName" v-model="selectedAlbum"
+                                       readonly/>
                             </div>
                             <div class="scroll-container form-control">
                                 <div v-for="picture in picturesCanBeAdded" :key="picture.uuid">
@@ -150,7 +157,8 @@
                         <form>
                             <div class="form-group m-2">
                                 <label for="albumName">相册名称</label>
-                                <input type="text" class="form-control" id="albumName" v-model="selectedAlbum" readonly/>
+                                <input type="text" class="form-control" id="albumName" v-model="selectedAlbum"
+                                       readonly/>
                             </div>
                             <div class="scroll-container form-control">
                                 <div v-for="picture in albumImages" :key="picture.uuid">

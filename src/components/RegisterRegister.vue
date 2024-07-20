@@ -10,25 +10,31 @@
                     <form @submit.prevent="SubmitRegister">
                         <div class="form-group">
                             <label for="username">用户名</label>
-                            <input type="text" class="form-control" id="username" v-model="username" placeholder="请输入用户名" required/>
+                            <input type="text" class="form-control" id="username" v-model="username"
+                                   placeholder="请输入用户名" required/>
                         </div>
                         <div class="form-group">
                             <label for="password">密码</label>
-                            <input type="password" class="form-control" id="password" v-model="password" placeholder="请输入密码" required/>
+                            <input type="password" class="form-control" id="password" v-model="password"
+                                   placeholder="请输入密码" required/>
                         </div>
                         <div class="form-group">
                             <label for="confirm_password">确认密码</label>
-                            <input type="password" class="form-control" id="confirm_password" v-model="confirm_password" placeholder="请确认密码" required/>
+                            <input type="password" class="form-control" id="confirm_password" v-model="confirm_password"
+                                   placeholder="请确认密码" required/>
                         </div>
                         <div class="form-group">
                             <label for="email">邮箱</label>
-                            <input type="email" class="form-control" id="email" v-model="email" placeholder="请输入邮箱" required/>
+                            <input type="email" class="form-control" id="email" v-model="email" placeholder="请输入邮箱"
+                                   required/>
                         </div>
                         <div class="form-group">
                             <label for="verification_code">验证码</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" id="email" v-model="verification_code" placeholder="请输入验证码" required/>
-                                <button type="button" class="btn btn-secondary" :disabled="isButtonDisabled" @click="sendVerificationCode">
+                                <input type="text" class="form-control" id="email" v-model="verification_code"
+                                       placeholder="请输入验证码" required/>
+                                <button type="button" class="btn btn-secondary" :disabled="isButtonDisabled"
+                                        @click="sendVerificationCode">
                                     {{ buttonLabel }}
                                 </button>
                             </div>

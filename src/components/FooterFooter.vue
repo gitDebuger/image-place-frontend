@@ -8,16 +8,20 @@
                 </div>
                 <div class="col-md-12 mb-4 mb-md-0">
                     <ul class="mb-0">
-                        <li><div class="col text-white m-2">
-                            <a href="https://github.com/gitDebuger" class="text-white">开发者GitHub仓库</a>
-                            &emsp;
-                            开发者邮箱：hygchn04@gmail.com
-                        </div></li>
-                        <li><div class="col">
-                            <a href="" class="text-white">津公网安备</a>
-                            &emsp;
-                            <a href="" class="text-white">津ICP备</a>
-                        </div></li>
+                        <li>
+                            <div class="col text-white m-2">
+                                <a href="https://github.com/gitDebuger" class="text-white">开发者GitHub仓库</a>
+                                &emsp;
+                                开发者邮箱：hygchn04@gmail.com
+                            </div>
+                        </li>
+                        <li>
+                            <div class="col">
+                                <a href="" class="text-white">津公网安备</a>
+                                &emsp;
+                                <a href="" class="text-white">津ICP备</a>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>

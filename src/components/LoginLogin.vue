@@ -10,11 +10,13 @@
                     <form @submit.prevent="submitLogin">
                         <div class="form-group">
                             <label for="username">用户名</label>
-                            <input type="text" class="form-control" id="username" placeholder="请输入用户名" v-model="username" required/>
+                            <input type="text" class="form-control" id="username" placeholder="请输入用户名"
+                                   v-model="username" required/>
                         </div>
                         <div class="form-group">
                             <label for="password">密码</label>
-                            <input type="password" class="form-control" id="password" placeholder="请输入密码" v-model="password" required/>
+                            <input type="password" class="form-control" id="password" placeholder="请输入密码"
+                                   v-model="password" required/>
                         </div>
                         <button type="submit" class="btn btn-primary m-2">登录</button>
                     </form>

@@ -24,7 +24,8 @@
                         <PersonalInfo></PersonalInfo>
                     </div>
                     <div v-if="selectedTab === 'changePassword'">
-                        <ChangePassword class="mt-2 text-center" style="max-width: 400px; margin-left: 200px"></ChangePassword>
+                        <ChangePassword class="mt-2 text-center"
+                                        style="max-width: 400px; margin-left: 200px"></ChangePassword>
                     </div>
                     <div v-if="selectedTab === 'changeAvatar'">
                         <ImageUpload style="margin-left: 300px"></ImageUpload>

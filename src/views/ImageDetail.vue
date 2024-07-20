@@ -13,7 +13,7 @@
                     <span class="m-1">URL</span>
                     <div class="input-group m-1">
                         <input type="text" class="form-control" :value="imageUrl" readonly/>
-                        <button class="btn btn-success" @click="copy(imageUrl)" >复制
+                        <button class="btn btn-success" @click="copy(imageUrl)">复制
                         </button>
                     </div>
                 </div>

@@ -10,7 +10,7 @@
                     allow-multiple="true"
                     accepted-file-types="image/*"
                     :server="server"
-                    />
+                />
             </div>
         </div>
         <FooterFooter style="background-color: rgba(31, 34, 54, 1)"></FooterFooter>

@@ -44,7 +44,8 @@
                         </div>
                         <div class="form-group m-2">
                             <span class="tooltip-container m-1">
-                                <span class="tooltip-icon" @mouseover="showTooltip = true" @mouseleave="showTooltip = false">?</span>
+                                <span class="tooltip-icon" @mouseover="showTooltip = true"
+                                      @mouseleave="showTooltip = false">?</span>
                                 <span class="tooltip-content" v-if="showTooltip">
                                     当图片状态设置为“不可访问”时，您将不能通过URL访问图片或查看图片详情。
                                 </span>
@@ -154,13 +155,16 @@ export default {
     width: 230px;
     height: 150px;
 }
+
 .image-card:hover {
     transform: scale(1.05);
 }
+
 .card-img-top {
     display: block;
     object-fit: contain;
 }
+
 .overlay {
     position: absolute;
     bottom: 0;
@@ -172,13 +176,16 @@ export default {
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
+
 .image-card:hover .overlay {
     opacity: 1;
 }
+
 .tooltip-container {
     position: relative;
     display: inline-block;
 }
+
 .tooltip-icon {
     background-color: #e2e2e2;
     border-radius: 50%;
@@ -191,6 +198,7 @@ export default {
     cursor: pointer;
     margin-left: 10px;
 }
+
 .tooltip-content {
     visibility: visible;
     width: 300px;

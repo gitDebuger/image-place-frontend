@@ -10,13 +10,16 @@
                     <form @submit.prevent="submitAdminLogin">
                         <div class="form-group">
                             <label for="username">用户名</label>
-                            <input type="text" class="form-control" id="username" placeholder="请输入用户名" v-model="username" required/>
+                            <input type="text" class="form-control" id="username" placeholder="请输入用户名"
+                                   v-model="username" required/>
                         </div>
                         <div class="form-group">
                             <label for="verification_code">验证码</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" id="email" v-model="verification_code" placeholder="请输入验证码" required/>
-                                <button type="button" class="btn btn-secondary" :disabled="isButtonDisabled" @click="sendVerificationCode">
+                                <input type="text" class="form-control" id="email" v-model="verification_code"
+                                       placeholder="请输入验证码" required/>
+                                <button type="button" class="btn btn-secondary" :disabled="isButtonDisabled"
+                                        @click="sendVerificationCode">
                                     {{ buttonLabel }}
                                 </button>
                             </div>

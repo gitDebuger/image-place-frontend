@@ -20,7 +20,8 @@
             </button>
             <button class="btn btn-primary m-2" @click="preview" :disabled="imageUrl === ''">头像预览</button>
             <button class="btn btn-danger m-2" @click="this.imageUrl = ''" :disabled="imageUrl === ''">清除图片</button>
-            <button class="btn btn-outline-success m-2" @click="uploadImage" :disabled="imageUrl === ''">上传头像</button>
+            <button class="btn btn-outline-success m-2" @click="uploadImage" :disabled="imageUrl === ''">上传头像
+            </button>
         </div>
     </div>
     <div class="modal d-block" v-if="showPreview">

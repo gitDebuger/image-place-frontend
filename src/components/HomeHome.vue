@@ -1,6 +1,7 @@
 <template>
     <div class="home fixed-top">
-        <NavbarNavbar @show-login="showLogin" @show-register="showRegister" @show-admin-login="showAdminLogin"></NavbarNavbar>
+        <NavbarNavbar @show-login="showLogin" @show-register="showRegister"
+                      @show-admin-login="showAdminLogin"></NavbarNavbar>
         <LoginLogin v-if="showLoginModal" @close="showLoginModal = false"></LoginLogin>
         <RegisterRegister v-if="showRegisterModal" @close="showRegisterModal = false"></RegisterRegister>
         <AdminLogin v-if="showAdminLoginModal" @close="showAdminLoginModal = false"></AdminLogin>

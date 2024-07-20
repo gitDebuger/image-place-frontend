@@ -24,28 +24,34 @@
         <button v-if="isLoggedIn" class="navbar-toggler m-3 ms-auto" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navItems" aria-controls="navbarNav" aria-expanded="false"
                 aria-label="Toggle navigation"
-        style="background-color: white">
+                style="background-color: white">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div v-if="isLoggedIn" id="navItems" class="collapse navbar-collapse">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item m-2 text-white">
-                    <router-link :to="uploadImageUrl" class="text-white" style="text-decoration: none">上传图片</router-link>
+                    <router-link :to="uploadImageUrl" class="text-white" style="text-decoration: none">上传图片
+                    </router-link>
                 </li>
                 <li class="nav-item m-2">
-                    <router-link :to="personProfileUrl" class="text-white" style="text-decoration: none">个人中心</router-link>
+                    <router-link :to="personProfileUrl" class="text-white" style="text-decoration: none">个人中心
+                    </router-link>
                 </li>
                 <li class="nav-item m-2 text-white">
-                    <router-link :to="myPicturesUrl" class="text-white" style="text-decoration: none">我的图片</router-link>
+                    <router-link :to="myPicturesUrl" class="text-white" style="text-decoration: none">我的图片
+                    </router-link>
                 </li>
                 <li class="nav-item m-2 text-white">
-                    <router-link :to="helpDocumentUrl" class="text-white" style="text-decoration: none">帮助文档</router-link>
+                    <router-link :to="helpDocumentUrl" class="text-white" style="text-decoration: none">帮助文档
+                    </router-link>
                 </li>
                 <li class="nav-item m-2 text-white">
-                    <a href="https://ys.mihoyo.com/cloud/" class="text-white" style="text-decoration: none" target="_blank">云原神网页版</a>
+                    <a href="https://ys.mihoyo.com/cloud/" class="text-white" style="text-decoration: none"
+                       target="_blank">云原神网页版</a>
                 </li>
                 <li class="nav-item m-2 text-white">
-                    <a href="https://sr.mihoyo.com/cloud/" class="text-white" style="text-decoration: none" target="_blank">云星穹铁道网页版</a>
+                    <a href="https://sr.mihoyo.com/cloud/" class="text-white" style="text-decoration: none"
+                       target="_blank">云星穹铁道网页版</a>
                 </li>
             </ul>
         </div>
@@ -70,9 +76,28 @@
                 </li>
             </ul>
         </div>
+        <button v-if="adminLoggedIn" class="navbar-toggler m-3 ms-auto" type="button" data-bs-toggle="collapse"
+                data-bs-target="#adminNavItems" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation"
+                style="background-color: white">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div v-if="adminLoggedIn" id="adminNavItems" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item m-2 text-white">
+                    <a href="https://ys.mihoyo.com/cloud/" class="text-white" style="text-decoration: none"
+                       target="_blank">云原神网页版</a>
+                </li>
+                <li class="nav-item m-2 text-white">
+                    <a href="https://sr.mihoyo.com/cloud/" class="text-white" style="text-decoration: none"
+                       target="_blank">云星穹铁道网页版</a>
+                </li>
+            </ul>
+        </div>
         <div v-if="adminLoggedIn" class="dropdown ms-auto m-2">
-            <p id="usernameDropdown" class="dropdown-toggle ms-auto" data-bs-toggle="dropdown" aria-expanded="false">
-                管理员<em>{{ adminUsername }}</em>已登录
+            <p id="usernameDropdown" class="dropdown-toggle ms-auto nav-item" data-bs-toggle="dropdown"
+               aria-expanded="false" style="font-size: 16px; color: #4caf50">
+                <em>管理员 {{ adminUsername }} 已登录</em>
             </p>
             <ul class="dropdown-menu ms-auto avatar dropdown-menu-end" aria-labelledby="usernameDropdown">
                 <li><a class="dropdown-item" @click="adminLogout">退出登录</a></li>
