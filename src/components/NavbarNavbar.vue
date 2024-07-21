@@ -17,7 +17,10 @@
                     <button class="btn btn-secondary" @click="showRegisterModal">注册</button>
                 </li>
                 <li class="nav-item m-2">
-                    <button class="btn btn-secondary" @click="showAdminLoginModal">管理员登录</button>
+                    <button class="btn btn-secondary" @click="showFindBackPasswordModal">找回密码</button>
+                </li>
+                <li class="nav-item m-2">
+                    <button class="btn btn-success" @click="showAdminLoginModal">管理员登录</button>
                 </li>
             </ul>
         </div>
@@ -85,6 +88,16 @@
         <div v-if="adminLoggedIn" id="adminNavItems" class="collapse navbar-collapse">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item m-2 text-white">
+                    <router-link :to="userManagementUrl" class="text-white" style="text-decoration: none">
+                        用户管理
+                    </router-link>
+                </li>
+                <li class="nav-item m-2 text-white">
+                    <router-link :to="pictureManagementUrl" class="text-white" style="text-decoration: none">
+                        图片管理
+                    </router-link>
+                </li>
+                <li class="nav-item m-2 text-white">
                     <a href="https://ys.mihoyo.com/cloud/" class="text-white" style="text-decoration: none"
                        target="_blank">云原神网页版</a>
                 </li>
@@ -108,6 +121,7 @@
 
 <script>
 import axios from "axios";
+import pictureManagement from "@/views/PictureManagement.vue";
 
 export default {
     methods: {
@@ -119,6 +133,9 @@ export default {
         },
         showAdminLoginModal() {
             this.$emit('show-admin-login');
+        },
+        showFindBackPasswordModal() {
+            this.$emit('show-find-back-password');
         },
         logout() {
             localStorage.removeItem('token');
@@ -154,6 +171,9 @@ export default {
         },
     },
     computed: {
+        pictureManagement() {
+            return pictureManagement
+        },
         isLoggedIn() {
             return !!localStorage.getItem('token');
         },
@@ -169,6 +189,8 @@ export default {
             personProfileUrl: '/profile',
             myPicturesUrl: '/pictures',
             helpDocumentUrl: '/help',
+            userManagementUrl: '/user-management',
+            pictureManagementUrl: '/picture-management',
         };
     },
     created() {

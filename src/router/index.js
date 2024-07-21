@@ -5,6 +5,8 @@ import MyPictures from "@/views/MyPictures.vue";
 import UploadPictures from "@/views/UploadPictures.vue";
 import HelpDocument from "@/views/HelpDocument.vue";
 import ImageDetail from "@/views/ImageDetail.vue";
+import UserManagement from "@/views/UserManagement.vue";
+import PictureManagement from "@/views/PictureManagement.vue";
 
 const routes = [
     {
@@ -44,6 +46,14 @@ const routes = [
         component: ImageDetail,
         props: true,
     },
+    {
+        path: '/user-management',
+        component: UserManagement,
+    },
+    {
+        path: '/picture-management',
+        component: PictureManagement,
+    }
 ];
 
 const router = createRouter({
@@ -53,7 +63,7 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
     if (to.matched.some(record => record.meta.requiresAuth)) {
-        if (!localStorage.getItem('token')) {
+        if (!localStorage.getItem('token') && !localStorage.getItem('adminToken')) {
             next({
                 path: '/',
             });

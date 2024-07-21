@@ -1,10 +1,12 @@
 <template>
     <div class="home fixed-top">
         <NavbarNavbar @show-login="showLogin" @show-register="showRegister"
-                      @show-admin-login="showAdminLogin"></NavbarNavbar>
+                      @show-admin-login="showAdminLogin" @show-find-back-password="showFindBackPassword"></NavbarNavbar>
         <LoginLogin v-if="showLoginModal" @close="showLoginModal = false"></LoginLogin>
         <RegisterRegister v-if="showRegisterModal" @close="showRegisterModal = false"></RegisterRegister>
         <AdminLogin v-if="showAdminLoginModal" @close="showAdminLoginModal = false"></AdminLogin>
+        <FindBackPassword v-if="showFindBackPasswordModal"
+                          @close="showFindBackPasswordModal = false"></FindBackPassword>
         <FooterFooter class="fixed-bottom"></FooterFooter>
     </div>
 </template>
@@ -14,6 +16,7 @@ import LoginLogin from "@/components/LoginLogin.vue";
 import RegisterRegister from "@/components/RegisterRegister.vue";
 import AdminLogin from "@/components/AdminLogin.vue";
 import FooterFooter from "@/components/FooterFooter.vue";
+import FindBackPassword from "@/components/FindBackPassword.vue";
 
 export default {
     components: {
@@ -22,12 +25,14 @@ export default {
         LoginLogin,
         RegisterRegister,
         AdminLogin,
+        FindBackPassword,
     },
     data() {
         return {
             showLoginModal: false,
             showRegisterModal: false,
             showAdminLoginModal: false,
+            showFindBackPasswordModal: false,
         }
     },
     methods: {
@@ -39,6 +44,9 @@ export default {
         },
         showAdminLogin() {
             this.showAdminLoginModal = true;
+        },
+        showFindBackPassword() {
+            this.showFindBackPasswordModal = true;
         },
     }
 }
