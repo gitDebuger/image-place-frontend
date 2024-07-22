@@ -35,12 +35,12 @@
                 <div class="modal-body">
                     <form>
                         <div class="form-group m-2">
-                            <label for="username">图片编号</label>
-                            <input type="text" class="form-control" id="username" v-model="imageUUID" readonly/>
+                            <label for="uuid">图片编号</label>
+                            <input type="text" class="form-control" id="uuid" v-model="imageUUID" readonly/>
                         </div>
                         <div class="form-group m-2">
-                            <label for="password">标题</label>
-                            <input type="text" class="form-control" id="password" v-model="imageTitle" required/>
+                            <label for="title">标题</label>
+                            <input type="text" class="form-control" id="title" v-model="imageTitle" required/>
                         </div>
                         <div class="form-group m-2">
                             <span class="tooltip-container m-1">
