@@ -121,7 +121,6 @@
 
 <script>
 import axios from "axios";
-import pictureManagement from "@/views/PictureManagement.vue";
 
 export default {
     methods: {
@@ -171,9 +170,6 @@ export default {
         },
     },
     computed: {
-        pictureManagement() {
-            return pictureManagement
-        },
         isLoggedIn() {
             return !!localStorage.getItem('token');
         },

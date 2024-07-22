@@ -49,10 +49,16 @@ const routes = [
     {
         path: '/user-management',
         component: UserManagement,
+        meta: {
+            requiresAuth: true
+        }
     },
     {
         path: '/picture-management',
         component: PictureManagement,
+        meta: {
+            requiresAuth: true
+        }
     }
 ];
 
