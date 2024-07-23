@@ -3,7 +3,6 @@ import HomeHome from "@/components/HomeHome.vue";
 import PersonalProfile from "@/views/PersonalProfile.vue";
 import MyPictures from "@/views/MyPictures.vue";
 import UploadPictures from "@/views/UploadPictures.vue";
-import HelpDocument from "@/views/HelpDocument.vue";
 import ImageDetail from "@/views/ImageDetail.vue";
 import UserManagement from "@/views/UserManagement.vue";
 import PictureManagement from "@/views/PictureManagement.vue";
@@ -30,13 +29,6 @@ const routes = [
     {
         path: '/upload',
         component: UploadPictures,
-        meta: {
-            requiresAuth: true
-        }
-    },
-    {
-        path: '/help',
-        component: HelpDocument,
         meta: {
             requiresAuth: true
         }

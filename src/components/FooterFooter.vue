@@ -19,7 +19,7 @@
                             <div class="col">
                                 <a href="" class="text-white">津公网安备</a>
                                 &emsp;
-                                <a href="" class="text-white">津ICP备</a>
+                                <a href="https://beian.miit.gov.cn" class="text-white">津ICP备2024021603号-1</a>
                             </div>
                         </li>
                     </ul>

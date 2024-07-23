@@ -45,10 +45,6 @@
                     </router-link>
                 </li>
                 <li class="nav-item m-2 text-white">
-                    <router-link :to="helpDocumentUrl" class="text-white" style="text-decoration: none">帮助文档
-                    </router-link>
-                </li>
-                <li class="nav-item m-2 text-white">
                     <a href="https://ys.mihoyo.com/cloud/" class="text-white" style="text-decoration: none"
                        target="_blank">云原神网页版</a>
                 </li>
@@ -70,9 +66,6 @@
                 </li>
                 <li>
                     <router-link class="dropdown-item" :to="myPicturesUrl">我的图片</router-link>
-                </li>
-                <li>
-                    <router-link class="dropdown-item" :to="helpDocumentUrl">帮助文档</router-link>
                 </li>
                 <li>
                     <a class="dropdown-item" @click="logout">退出登录</a>
@@ -184,7 +177,6 @@ export default {
             uploadImageUrl: '/upload',
             personProfileUrl: '/profile',
             myPicturesUrl: '/pictures',
-            helpDocumentUrl: '/help',
             userManagementUrl: '/user-management',
             pictureManagementUrl: '/picture-management',
         };
