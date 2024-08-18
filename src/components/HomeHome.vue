@@ -1,5 +1,5 @@
 <template>
-    <div class="home fixed-top">
+    <div class="fixed-top">
         <NavbarNavbar @show-login="showLogin" @show-register="showRegister"
                       @show-admin-login="showAdminLogin" @show-find-back-password="showFindBackPassword"></NavbarNavbar>
         <LoginLogin v-if="showLoginModal" @close="showLoginModal = false"></LoginLogin>
@@ -7,6 +7,7 @@
         <AdminLogin v-if="showAdminLoginModal" @close="showAdminLoginModal = false"></AdminLogin>
         <FindBackPassword v-if="showFindBackPasswordModal"
                           @close="showFindBackPasswordModal = false"></FindBackPassword>
+        <HomePageClock></HomePageClock>
         <FooterFooter class="fixed-bottom"></FooterFooter>
     </div>
 </template>
@@ -17,9 +18,11 @@ import RegisterRegister from "@/components/RegisterRegister.vue";
 import AdminLogin from "@/components/AdminLogin.vue";
 import FooterFooter from "@/components/FooterFooter.vue";
 import FindBackPassword from "@/components/FindBackPassword.vue";
+import HomePageClock from "@/components/HomePageClock.vue";
 
 export default {
     components: {
+        HomePageClock,
         FooterFooter,
         NavbarNavbar,
         LoginLogin,

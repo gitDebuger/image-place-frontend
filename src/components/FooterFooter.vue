@@ -1,5 +1,5 @@
 <template>
-    <footer class="text-center" style="background-color: rgba(0, 0, 0, 0.2)">
+    <footer class="text-center" style="background-color: rgba(31, 43, 51, 100%)">
         <div class="container p-4">
             <div class="text-center">
                 <div class="col-md-12 mb-4 mb-md-0 text-white">
@@ -26,7 +26,7 @@
                 </div>
             </div>
         </div>
-        <div class="text-center p-3 text-white" style="background-color: rgba(0, 0, 0, 0.3)">
+        <div class="text-center p-3 text-white" style="background-color: rgba(31, 43, 51, 100%)">
             &copy; 2024 PLC图床 版权所有
         </div>
     </footer>

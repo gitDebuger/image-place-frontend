@@ -194,7 +194,7 @@ export default {
 }
 
 #navbar {
-    background: rgba(31, 43, 51, 70%);
+    background: rgba(31, 43, 51, 100%);
 }
 
 .avatar {
