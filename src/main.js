@@ -8,7 +8,7 @@ import VueCropper from "vue-cropper";
 import Clipboard from "v-clipboard";
 import 'vue-cropper/dist/index.css'
 
-axios.defaults.baseURL = process.env.BACKEND_BASE_URL;
+axios.defaults.baseURL = process.env.NODE_ENV === "development" ? "http://localhost:5000" : "https://file.imageplc.com";
 
 createApp(App)
     .use(router)
